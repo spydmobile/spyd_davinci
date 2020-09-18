@@ -1,4 +1,4 @@
-
+require('dotenv').config()
 const Discord = require('discord.js');
 const client = new Discord.Client();
 // Extract the required classes from the discord.js module
@@ -41,5 +41,5 @@ client.on('message', msg => {
 
 
 })
-// Log our bot in using the token from https://discord.com/developers/applications
-client.login('NzU2MzI4MTEyNjA5ODIwNzk1.X2QPcQ.a-WZCpN1GzlIhUk0Gx1yhSlkW3s');
+
+client.login(process.env.BOT_TOKEN);
