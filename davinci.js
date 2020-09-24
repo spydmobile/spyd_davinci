@@ -15,32 +15,65 @@ client.on('ready', () => {
 
 // bot commands
 const pingReply = msg => {
-    msg.reply('Hiya!');
+    msg.reply('Pong!');
 }
 
 const helloReply = msg => {
     msg.reply('Hiya!');
 }
 const createGithubIssue = msg => {
-    msg.reply(`Sorry #{msg.author.name}, I cant do that yet....`);
+    msg.reply(`Sorry, I cant do that yet....`);
 }
 const createRedmineIssue = msg => {
-    msg.reply(`Sorry #{msg.author.name}, I cant do that yet....`);
+    msg.reply(`Sorry, I cant do that yet....`);
 }
 
+const subscribeToPublicRepo = msg => {
+    // bb:intellifire/intellifire_front
+}
+const subscribeToPublicRSS = msg => {
+    // bb:intellifire/intellifire_front
+}
 
-
+const subscribeToFrancoRepo = msg => {
+    // bb:intellifire/intellifire_front
+}
 const helpUsage = msg => {
 
-    msg.reply(`Hi I am Davinci ${davinciVersion} (rev. ${revision}), Franco's New Discord Bot.
+    let txt = `
     USAGE: !# <verb> <noun> <paramater string>
     EG: !# rerun psaas job_12345678
 
+    To get this Help Screen use:
+    !# help
+
+    to get help with a command type:
+    !# help <command>
     verbs and nouns are NOT case sensitive but the parmater string is.
-
+    paramater string can contain many params separated by tilde (~)
+    
+    EG: !# pull hair left~right~out
+    
     Currently available bot commands are:
+`
 
-    `);
+    botCommands.forEach(cm => {
+        let nounString = Object.keys(cm.nouns).filter(n => n !== 'default').join("||")
+        txt += cm.name + "\n" + `!# ${cm.verb} ` + nounString + "\n"
+    })
+
+
+    var embed = new MessageEmbed()
+        // Set the title of the field
+        .setTitle(`Davinci ${davinciVersion} (rev. ${revision}) Help!`)
+        // Set the color of the embed
+        .setColor(0xff0000)
+        // Set the main content of the embed
+        .setDescription(txt);
+    // Send the embed to the same channel as the message
+    msg.channel.send(embed);
+
+
 }
 
 
@@ -49,7 +82,11 @@ const botCommands = [
         name: 'Davinci Help',
         verb: 'help',
         nouns:
-            { "default": helpUsage }
+        {
+            "default": helpUsage,
+            "ping": helpUsage,
+            // "hello": 'xxx'
+        }
 
 
     },
@@ -85,8 +122,31 @@ const botCommands = [
     },
 
 
+    {
+        name: 'Monitor something in channel',
+        verb: 'monitor',
+        nouns:
+        {
+            "public_repo": subscribeToPublicRepo,
+            "public_rss": subscribeToPublicRSS,
+            "franco_repo": subscribeToFrancoRepo,
+
+
+        }
+
+
+    },
+
+
 
 ]
+
+const foo = msg => {
+    // bb:intellifire/intellifire_front
+}
+
+
+
 
 const getBotCommandByVerb = verb => {
     let cmdObj = botCommands.filter(c => c.verb == verb)
