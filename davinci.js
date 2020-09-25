@@ -7,6 +7,10 @@ const {
     saveRepoTracking,
     updateSubCommit
 } = require('./storage')
+const logos = {
+    "bb": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe3ymaUPtB2AjTs05Gq1BHonnm5XIY6vSBkw&usqp=CAU",
+    "gh": "https://miro.medium.com/max/325/1*ekOYsVAtOKFeeJyhv5NVhA.jpeg"
+}
 const { Bitbucket } = require('bitbucket')
 const { Octokit } = require("@octokit/rest");
 const { createTokenAuth } = require("@octokit/auth-token");
@@ -52,11 +56,11 @@ bot.on('ready', () => {
 const pingReply = msg => {
     msg.reply('Pong!');
 }
-const saveSubscription = sub => {
-    return new Promise((resolve, reject) => {
+// const saveSubscription = sub => {
+//     return new Promise((resolve, reject) => {
 
-    });
-}
+//     });
+// }
 const helloReply = msg => {
     msg.reply('Hiya!');
 }
@@ -116,10 +120,7 @@ const subscribeToFrancoRepo = async msg => {
                 let commitMsg = data.values[0].message
                 let type = data.values[0].type
                 let link = data.values[0].links.html.href
-                let logos = {
-                    "bb": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSe3ymaUPtB2AjTs05Gq1BHonnm5XIY6vSBkw&usqp=CAU",
-                    "gh": "https://miro.medium.com/max/325/1*ekOYsVAtOKFeeJyhv5NVhA.jpeg"
-                }
+
                 var embed = new MessageEmbed()
                     // Set the title of the field
 
@@ -447,10 +448,14 @@ const checkSubForUpdate = sub => {
         //compare commits
         if (sub.host == 'bb') {
             //BB
+            // console.log('bbdata', data)
+            sub.commitMessage = data.values[0].message
             if (sub.hash == data.values[0].hash) {
+
                 resolve(false)
             }
             else {
+
                 updateSubCommit(sub, data.values[0].hash)
                     .then(e => {
                         resolve(sub)
@@ -459,6 +464,8 @@ const checkSubForUpdate = sub => {
         }
         else {
             //GH
+            // console.log('ghdata', data.data[0].commit.message)
+            sub.commitMessage = data.data[0].commit.message
             if (sub.hash == data.data[0].sha) {
                 resolve(false)
             }
@@ -477,6 +484,25 @@ const checkSubForUpdate = sub => {
 }
 const postSubUpdate = (update) => {
     console.log("update:", update)
+    var embed = new MessageEmbed()
+        // Set the title of the field
+
+        .setTitle(`${update.type}: ${update.commitMessage}`)
+        // Set the color of the embed
+        .setColor(0x0000ff)
+        // Set the main content of the embed
+        .setImage(logos[host])
+        .setDescription("This is a bitbucket commit.")
+        .addField('Commit Hash', hash, true)
+        .addField('Commit Date', date, true)
+        .addField('Commit URL', link, false)
+        .setTimestamp()
+        .setFooter(`Davinci ${davinciVersion} (rev. ${revision})` + ' - Powered by Discord.js', 'https://i.imgur.com/wSTFkRM.png');
+
+
+
+    // Send the embed to the same channel as the message
+    msg.channel.send(embed);
 }
 const refreshRepoSubs = () => {
     return new Promise(async (resolve, reject) => {
@@ -490,6 +516,7 @@ const refreshRepoSubs = () => {
                 .then(up => {
                     if (!up) {
                         let text = `no update for ${sub.subId}`
+                        console.log(text)
                         // post a debug to the channel.
                         //   sendChannelMessage(sub.channelId, text)
                     }
