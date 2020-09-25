@@ -15,9 +15,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "f2ea26c513332c1d39f8e23fe529352493db48c3",
-    "commitMessage": "update embed with better description.",
-    "date": "2020-09-25T20:35:11Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/f2ea26c513332c1d39f8e23fe529352493db48c3"
+    "hash": "e8c161e30cbde2feebc2119b97c4426a6c1ed5b1",
+    "commitMessage": "added a thumbnail to embed",
+    "date": "2020-09-25T20:38:50Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/e8c161e30cbde2feebc2119b97c4426a6c1ed5b1"
   }
 ]

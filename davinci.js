@@ -495,7 +495,7 @@ const postSubUpdate = (update) => {
         // Set the color of the embed
         .setColor(0x0000ff)
         // Set the main content of the embed
-        .setImage(logos[update.host])
+        //.setImage(logos[update.host])
         .setThumbnail(logos[update.host])
         .setDescription(`This is a ${repoType} commit.`)
         .addField('Commit Hash', update.hash, true)
