@@ -5,7 +5,7 @@ const jsonFile = require('jsonfile');
 const {
     getRepoTracking,
     saveRepoTracking,
-
+    updateSubCommit
 } = require('./storage')
 const { Bitbucket } = require('bitbucket')
 const { Octokit } = require("@octokit/rest");
@@ -377,7 +377,9 @@ const foo = msg => {
 
 const sendChannelMessage = (channelId, messageText) => {
     return new Promise((resolve, reject) => {
-        client.channels.get(channelId).send(messageText)
+        console.log('channel=====', bot.channels)
+        bot.channels.cache.get(channelId).send(messageText)
+            // bot.channels[channelId].send(messageText)
             .then(
                 resolve()
             )
@@ -414,7 +416,7 @@ const pullSubData = sub => {
                     // fields 
                 })
                     .then(({ data, headers }) => {
-                        console.log('bbdata', data)
+                        //('bbdata', data)
                         resolve(data)
                     })
             }
@@ -427,7 +429,7 @@ const pullSubData = sub => {
                     repo,
                 })
                     .then(data => {
-                        console.log('ghdata', data)
+                        // console.log('ghdata', data)
                         resolve(data)
 
 
@@ -445,15 +447,36 @@ const checkSubForUpdate = sub => {
         //compare commits
         if (sub.host == 'bb') {
             //BB
-            // if (sub.hash == data.)
+            if (sub.hash == data.values[0].hash) {
+                resolve(false)
+            }
+            else {
+                updateSubCommit(sub, data.values[0].hash)
+                    .then(e => {
+                        resolve(sub)
+                    })
+            }
         }
         else {
             //GH
+            if (sub.hash == data.data[0].sha) {
+                resolve(false)
+            }
+            else {
+                updateSubCommit(sub, data.data[0].sha)
+                    .then(e => {
+                        resolve(sub)
+                    })
+            }
         }
+
         // if commits same, resolve false
 
         // else resolve updated commit.
     });
+}
+const postSubUpdate = (update) => {
+    console.log("update:", up)
 }
 const refreshRepoSubs = () => {
     return new Promise(async (resolve, reject) => {
@@ -468,10 +491,11 @@ const refreshRepoSubs = () => {
                     if (!up) {
                         let text = `no update for ${sub.subId}`
                         // post a debug to the channel.
-                        sendChannelMessage(sub.channelId, text)
+                        //   sendChannelMessage(sub.channelId, text)
                     }
                     else {
                         //else post an embed of the new commit in the channel
+                        postSubUpdate(up)
                     }
                 })
 
@@ -617,13 +641,14 @@ process.on('unhandledRejection', error => console.error('Uncaught Promise Reject
 
 cron.schedule('*/2 * * * *', () => {
     console.log('running a task every two minutes');
-    refreshDavinciStatus()
+    //refreshDavinciStatus()
     refreshRepoSubs()
 });
 
 bot.on('ready', () => {
     // bot.user.setStatus('online', 'nose pickin')
     console.log("Davinci is ready!")
+    refreshRepoSubs()
     bot.user.setPresence({
         activity: {
             name: 'Franco trying to build me! LOL',
