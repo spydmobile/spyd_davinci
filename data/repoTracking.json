@@ -15,6 +15,7 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "f7f8f6eb500c72cc1ddfa24e9205c3f307020dba"
+    "hash": "d23856b2031ef6414f1a7257af3fbb3bccd5854b",
+    "commitMessage": "connected the ankle bone to the knee bone!"
   }
 ]
