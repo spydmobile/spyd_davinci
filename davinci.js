@@ -378,7 +378,7 @@ const foo = msg => {
 
 const sendChannelMessage = (channelId, messageText) => {
     return new Promise((resolve, reject) => {
-        console.log('channel=====', bot.channels)
+        // console.log('channel=====', bot.channels)
         bot.channels.cache.get(channelId).send(messageText)
             // bot.channels[channelId].send(messageText)
             .then(
@@ -450,6 +450,7 @@ const checkSubForUpdate = sub => {
             //BB
             // console.log('bbdata', data)
             sub.commitMessage = data.values[0].message
+            sub.date = data.values[0].date
             if (sub.hash == data.values[0].hash) {
 
                 resolve(false)
@@ -464,8 +465,9 @@ const checkSubForUpdate = sub => {
         }
         else {
             //GH
-            // console.log('ghdata', data.data[0].commit.message)
+            //console.log('ghdata', data.data[0].commit)
             sub.commitMessage = data.data[0].commit.message
+            sub.date = data.data[0].commit.date
             if (sub.hash == data.data[0].sha) {
                 resolve(false)
             }
@@ -487,7 +489,7 @@ const postSubUpdate = (update) => {
     var embed = new MessageEmbed()
         // Set the title of the field
 
-        .setTitle(`${update.type}: ${update.commitMessage}`)
+        .setTitle(`Commit: ${update.commitMessage}`)
         // Set the color of the embed
         .setColor(0x0000ff)
         // Set the main content of the embed
