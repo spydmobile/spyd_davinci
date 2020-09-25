@@ -35,11 +35,6 @@ const francoOptions = {
 }
 const bitbucketFranco = new Bitbucket(francoOptions)
 
-// bitbucketFranco.repositories
-//     .listGlobal()
-//     .then(({ data }) => console.log(data.values))
-//     .catch((err) => console.error(err))
-
 const revision = require('child_process')
     .execSync('git rev-parse --short HEAD')
     .toString().trim()
