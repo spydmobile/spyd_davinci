@@ -61,7 +61,7 @@ const updateSubCommit = (sub, hash) => {
             jsonfile.writeFile(file, readyObj, { spaces: 2 }, function (err) {
                 if (err) console.error(err)
                 console.log('Updated trackingObject...', sub)
-                resolve()
+                resolve(sub)
             })
         })
     });
