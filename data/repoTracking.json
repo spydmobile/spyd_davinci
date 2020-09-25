@@ -15,7 +15,8 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "f3ef2c92cadf69a6c7471f29228fb166765dbe8b",
-    "commitMessage": "add commit dates to update embed"
+    "hash": "3ad0b305c0819979268b4b932a071d11dbe71e66",
+    "commitMessage": "tweak dates",
+    "date": "2020-09-25T20:22:33Z"
   }
 ]

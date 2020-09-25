@@ -465,9 +465,10 @@ const checkSubForUpdate = sub => {
         }
         else {
             //GH
-            console.log('ghdata', data.data[0].commit)
+            console.log('ghdata', data.data[0])
             sub.commitMessage = data.data[0].commit.message
             sub.date = data.data[0].commit.author.date
+            sub.link = data.data[0].html_url
             if (sub.hash == data.data[0].sha) {
                 resolve(false)
             }
