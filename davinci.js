@@ -476,7 +476,7 @@ const checkSubForUpdate = sub => {
     });
 }
 const postSubUpdate = (update) => {
-    console.log("update:", up)
+    console.log("update:", update)
 }
 const refreshRepoSubs = () => {
     return new Promise(async (resolve, reject) => {
