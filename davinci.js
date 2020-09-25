@@ -451,6 +451,7 @@ const checkSubForUpdate = sub => {
             // console.log('bbdata', data)
             sub.commitMessage = data.values[0].message
             sub.date = data.values[0].date
+            sub.link = data.values[0].links.html.href
             if (sub.hash == data.values[0].hash) {
 
                 resolve(false)
