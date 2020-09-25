@@ -465,7 +465,7 @@ const checkSubForUpdate = sub => {
         }
         else {
             //GH
-            console.log('ghdata', data.data[0])
+            //console.log('ghdata', data.data[0])
             sub.commitMessage = data.data[0].commit.message
             sub.date = data.data[0].commit.author.date
             sub.link = data.data[0].html_url
@@ -487,6 +487,7 @@ const checkSubForUpdate = sub => {
 }
 const postSubUpdate = (update) => {
     console.log("update:", update)
+    let repoType = (update.host == 'bb') ? 'BitBucket' : "Github"
     var embed = new MessageEmbed()
         // Set the title of the field
 
@@ -495,7 +496,7 @@ const postSubUpdate = (update) => {
         .setColor(0x0000ff)
         // Set the main content of the embed
         .setImage(logos[update.host])
-        .setDescription("This is a bitbucket commit.")
+        .setDescription(`This is a ${repoType} commit.`)
         .addField('Commit Hash', update.hash, true)
         .addField('Commit Date', update.date, true)
         .addField('Commit URL', update.link, false)

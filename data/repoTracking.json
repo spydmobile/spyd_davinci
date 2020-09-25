@@ -15,8 +15,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "3ad0b305c0819979268b4b932a071d11dbe71e66",
-    "commitMessage": "tweak dates",
-    "date": "2020-09-25T20:22:33Z"
+    "hash": "26f84e73c3d6bdff4ab73edea4482b4c6d533a20",
+    "commitMessage": "fixing the commit link...",
+    "date": "2020-09-25T20:32:06Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/26f84e73c3d6bdff4ab73edea4482b4c6d533a20"
   }
 ]
