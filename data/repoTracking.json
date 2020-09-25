@@ -15,7 +15,7 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "05f77d5ce78ab1a0ccc6b1bb602d94e3bf611128",
-    "commitMessage": "added update embed"
+    "hash": "f3ef2c92cadf69a6c7471f29228fb166765dbe8b",
+    "commitMessage": "add commit dates to update embed"
   }
 ]
