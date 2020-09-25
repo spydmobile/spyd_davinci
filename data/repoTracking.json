@@ -1,0 +1,20 @@
+[
+  {
+    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
+    "channelId": "756510148985356420",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "42215c2c31cc4fc0823af400e8d4b90499a51463"
+  },
+  {
+    "subId": "735286888843182131-bb-intellifire-intellifire_front",
+    "channelId": "735286888843182131",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "intellifire",
+    "repoSlug": "intellifire_front",
+    "hash": "ccc136a5b9751fc4d16e6f4941006da86a9a9f80"
+  }
+]
