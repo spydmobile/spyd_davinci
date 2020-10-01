@@ -18,10 +18,10 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "a03dd26de6c7e93470cadbfbc67850e5d20c18ff",
-    "commitMessage": "End of day cleanup",
-    "date": "2020-09-25T20:57:25Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/a03dd26de6c7e93470cadbfbc67850e5d20c18ff"
+    "hash": "813c47d98ad946d5714f65a30495a4241c1a7b25",
+    "commitMessage": "started adding psaas community logic to bot",
+    "date": "2020-10-01T15:30:22Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/813c47d98ad946d5714f65a30495a4241c1a7b25"
   },
   {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
@@ -30,6 +30,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "a03dd26de6c7e93470cadbfbc67850e5d20c18ff"
+    "hash": "813c47d98ad946d5714f65a30495a4241c1a7b25",
+    "commitMessage": "started adding psaas community logic to bot",
+    "date": "2020-10-01T15:30:22Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/813c47d98ad946d5714f65a30495a4241c1a7b25"
   }
 ]

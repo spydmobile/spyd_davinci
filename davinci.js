@@ -690,9 +690,6 @@ bot.on('ready', () => {
             name: '!# Help',
             details: 'About bot building',
             type: "PLAYING",
-            assets: {
-
-            },
             timestamps: {
                 start: new Date()
             },
