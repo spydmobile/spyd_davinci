@@ -14,9 +14,16 @@ const logos = {
 const { Bitbucket } = require('bitbucket')
 const { Octokit } = require("@octokit/rest");
 const { createTokenAuth } = require("@octokit/auth-token");
-const github = new Octokit();
+
 const githubToken = process.env.GH_TOKEN
-const githubAuth = createTokenAuth(githubToken);
+console.log(typeof githubToken, githubToken)
+//const githubAuth = createTokenAuth(String(githubToken));
+//const githubTokenAuth = githubAuth()
+const github = new Octokit(
+    {
+        auth: githubToken,
+    }
+);
 var cron = require('node-cron');
 const clientOptions = {
     baseUrl: 'https://api.bitbucket.org/2.0',
@@ -57,22 +64,116 @@ const pingReply = msg => {
 //     });
 // }
 const helloReply = msg => {
-    msg.reply('Hiya!');
+    // msg.react('😄');
+    // msg.reply('Hiya!');
+    msg.react('👍').then(() => msg.react('👎'));
+
+    const filter = (reaction, user) => {
+        return ['👍', '👎'].includes(reaction.emoji.name) && user.id === msg.author.id;
+    };
+
+    msg.awaitReactions(filter, { max: 1, time: 30000, errors: ['time'] })
+        .then(collected => {
+            const reaction = collected.first();
+
+            if (reaction.emoji.name === '👍') {
+                msg.reply('you reacted with a thumbs up.');
+            } else {
+                msg.reply('you reacted with a thumbs down.');
+            }
+        })
+        .catch(collected => {
+            msg.reply('Timeout....you reacted with neither a thumbs up, nor a thumbs down.');
+        });
 }
 const createGithubIssue = msg => {
-    msg.reply(`Sorry, I cant do that yet....`);
+    return new Promise(async (resolve, reject) => {
+
+        console.log(msg)
+        let cmd = await msg.content
+        let parsedCommandArr = await cmd.replace("!# ", '').split(" ")
+        console.log('parsedCommandArr', parsedCommandArr)
+        //let verb = parsedCommandArr[0].toLowerCase()
+        //let noun = parsedCommandArr[1] ? parsedCommandArr[1].toLowerCase() : 'default'
+        let owner = await parsedCommandArr[2]
+        let repo = await parsedCommandArr[3]
+        let title = await parsedCommandArr.slice(4).join(' ');
+        console.log(title)
+        //const ghAuthentication = await githubAuth();
+        github.request('POST /repos/{owner}/{repo}/issues', {
+            owner: owner,
+            repo: repo,
+            title: title,
+            body: 'This is just a test issue.',
+            accept: 'application/vnd.github.v3+json'
+        })
+            .then((foo) => {
+                console.log(foo)
+                msg.reply(`issue created....`, "/n", JSON.stringify(foo));
+                resolve()
+            })
+            .catch(err => {
+                console.log(err)
+                reject(err)
+            })
+    });
+
+
+
+
+
+
 }
 const createRedmineIssue = msg => {
-    msg.reply(`Sorry, I cant do that yet....`);
-}
+    return new Promise((resolve, reject) => {
+        msg.reply(`Sorry, I cant do that yet....`);
+        resolve()
+    });
 
+}
+const createBitbucketIssue = msg => {
+    return new Promise(async (resolve, reject) => {
+
+        // console.log(msg)
+        let cmd = await msg.content
+        let parsedCommandArr = await cmd.replace("!# ", '').split(" ")
+        console.log('parsedCommandArr', parsedCommandArr)
+        //let verb = parsedCommandArr[0].toLowerCase()
+        //let noun = parsedCommandArr[1] ? parsedCommandArr[1].toLowerCase() : 'default'
+        let workspace = await parsedCommandArr[2]
+        let repo_slug = await parsedCommandArr[3]
+        bitbucketFranco.issue_tracker.create({
+            _body: {
+                title: 'test issue',
+                body: 'This is a demo of Davinci.'
+            },
+            repo_slug,
+            workspace
+        })
+
+
+            .then(({ data, headers }) => {
+                console.log(data)
+                msg.reply(`issue created....`, "/n", JSON.stringify(foo));
+                resolve()
+
+            })
+
+    });
+
+}
 const subscribeToPublicRepo = msg => {
     // bb:intellifire/intellifire_front
 }
 const subscribeToPublicRSS = msg => {
     // bb:intellifire/intellifire_front
 }
+const createNewGitHubIssue = (title, owner, repo) => {
+    console.group("Executing createNewGitHubIssue...")
 
+
+
+}
 const subscribeToFrancoRepo = async msg => {
     let cmd = msg.content
     console.log("msg", msg)
@@ -306,6 +407,56 @@ const helpMonitor = msg => {
 
 
 }
+const helpCreateIssue = msg => {
+
+    let txt = `
+    USAGE: !# create_issue <service> <owner/projectid> <repo/issue_type> <title>
+    Examples: 
+    !# create_issue github spydmobile spyd_davinci purple widge should be green.
+    !# create_issue bitbucket intellifire intellifire_easymap This is a sample issue.
+    !# create_issue redmine 1234 bug output file is blank.
+
+
+    **Where <service> is one of:**
+    
+    "github" Creates the issue in Github.
+    "bitbucket" Creates the issue in Bitbucket.
+    "redmine" Creates the issue in Redmine.
+
+    **Where the <owner/projectid> is either:**
+
+    for github/bitbucket, the repo owner string or project owner string.
+    for redmine, the projectid to make the issue in.
+
+    **Where the <repo/issue_type> is either:**
+
+    for github/bitbucket, the github repo code or repo slug
+    for redmine, the issue_type: eg bug, task, depenmds on redmine config.
+
+    **Where the <title> is a string that will be used for the title**
+    in either github or redmine.
+
+    This will cause Davinci to create a new issue in either github/bitbucket or redmine.
+    `
+
+    var embed = new MessageEmbed()
+        // Set the title of the field
+        .setTitle(`Davinci ${davinciVersion} (rev. ${revision}) Help!`)
+        // Set the color of the embed
+        .setColor(0xff0000)
+        // Set the main content of the embed
+        .setDescription(txt)
+        .setTimestamp()
+        .setFooter('Powered by Discord.js', 'https://i.imgur.com/wSTFkRM.png');
+
+
+
+    // Send the embed to the same channel as the message
+    msg.channel.send(embed);
+
+
+}
+
 
 const botCommands = [
     {
@@ -316,6 +467,7 @@ const botCommands = [
             "default": helpUsage,
             "ping": helpUsage,
             "monitor": helpMonitor,
+            "create_issue": helpCreateIssue,
             // "hello": 'xxx'
         }
 
@@ -341,7 +493,8 @@ const botCommands = [
         nouns:
         {
             "github": createGithubIssue,
-            "redmine": createRedmineIssue
+            "redmine": createRedmineIssue,
+            "bitbucket": createBitbucketIssue
         }
 
 
@@ -419,7 +572,7 @@ const pullSubData = sub => {
             else {
                 let owner = workspace
                 let repo = repoSlug
-                const ghAuthentication = await githubAuth();
+                //  const ghAuthentication = await githubAuth();
                 github.repos.listCommits({
                     owner,
                     repo,
