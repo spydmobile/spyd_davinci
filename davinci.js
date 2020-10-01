@@ -561,6 +561,13 @@ bot.on('message', msg => {
         let cmd = msg.content
 
         if (cmd.startsWith('!#')) {
+            console.log('msg.author', msg.author)
+            // Lets filter out psaas community messages that are from non-devs.
+
+            // check server
+
+            // check for dev role
+
 
             // here we extract verb noun and param
             let parsedCommandArr = cmd.replace("!# ", '').split(" ")
@@ -680,14 +687,17 @@ bot.on('ready', () => {
     refreshRepoSubs()
     bot.user.setPresence({
         activity: {
-            name: 'Franco trying to build me! LOL',
-            details: 'I wanna be a cowboy',
-            type: "WATCHING",
-            emoji: ":thumb:",
+            name: '!# Help',
+            details: 'About bot building',
+            type: "PLAYING",
+            assets: {
+
+            },
             timestamps: {
                 start: new Date()
             },
-            url: "https://spyd.com"
+            //  url: "https://spyd.com", //url when streaming
+            status: 'dnd',
         },
         status: 'online' //idle invisible dnd online
     });
