@@ -220,7 +220,7 @@ const subscribeToFrancoRepo = async msg => {
                 var embed = new MessageEmbed()
                     // Set the title of the field
 
-                    .setTitle(`${type}: ${commitMsg}`)
+                    .setTitle(`${repoSlug} - ${type}: ${commitMsg}`)
                     // Set the color of the embed
                     .setColor(0x0000ff)
                     // Set the main content of the embed
@@ -431,10 +431,10 @@ const helpCreateIssue = msg => {
     **Where the <repo/issue_type> is either:**
 
     for github/bitbucket, the github repo code or repo slug
-    for redmine, the issue_type: eg bug, task, depenmds on redmine config.
+    for redmine, the issue_type: eg bug, task, depends on redmine config.
 
     **Where the <title> is a string that will be used for the title**
-    in either github or redmine.
+    in either github/bitbucket or redmine.
 
     This will cause Davinci to create a new issue in either github/bitbucket or redmine.
     `
