@@ -640,7 +640,8 @@ const postSubUpdate = (update) => {
     var embed = new MessageEmbed()
         // Set the title of the field
 
-        .setTitle(`Commit: ${update.commitMessage}`)
+        .setTitle(`${repoSlug} - Commit: ${update.commitMessage}`)
+
         // Set the color of the embed
         .setColor(0x0000ff)
         // Set the main content of the embed

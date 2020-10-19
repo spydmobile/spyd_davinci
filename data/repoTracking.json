@@ -30,10 +30,10 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "526b62b1481281e76b8c541d955077cac465df49",
-    "commitMessage": "Add repo slug to Monitor commit",
-    "date": "2020-10-19T13:59:09Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/526b62b1481281e76b8c541d955077cac465df49"
+    "hash": "f071a5e8544d2a177179893921bb63bab00cb8f8",
+    "commitMessage": "Update GH to show repo Slug",
+    "date": "2020-10-19T14:00:41Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/f071a5e8544d2a177179893921bb63bab00cb8f8"
   },
   {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
@@ -42,9 +42,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "526b62b1481281e76b8c541d955077cac465df49",
-    "commitMessage": "Add repo slug to Monitor commit",
-    "date": "2020-10-19T13:59:09Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/526b62b1481281e76b8c541d955077cac465df49"
+    "hash": "f071a5e8544d2a177179893921bb63bab00cb8f8",
+    "commitMessage": "Update GH to show repo Slug",
+    "date": "2020-10-19T14:00:41Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/f071a5e8544d2a177179893921bb63bab00cb8f8"
   }
 ]
