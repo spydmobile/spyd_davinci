@@ -149,7 +149,7 @@ const createBitbucketIssue = msg => {
         bitbucketFranco.issue_tracker.create({
             _body: {
                 title: title,
-                body: title
+                body: "This issue was created by the Davinci Bot."
             },
             repo_slug,
             workspace

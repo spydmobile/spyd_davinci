@@ -30,10 +30,10 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06",
-    "commitMessage": "Update repo trackers data",
-    "date": "2020-10-19T14:33:39Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06"
+    "hash": "361d72303143d462023d3f25daf769c07bdda095",
+    "commitMessage": "Refine create issue messages for BB",
+    "date": "2020-10-19T15:04:54Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/361d72303143d462023d3f25daf769c07bdda095"
   },
   {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
@@ -42,9 +42,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06",
-    "commitMessage": "Update repo trackers data",
-    "date": "2020-10-19T14:33:39Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06"
+    "hash": "361d72303143d462023d3f25daf769c07bdda095",
+    "commitMessage": "Refine create issue messages for BB",
+    "date": "2020-10-19T15:04:54Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/361d72303143d462023d3f25daf769c07bdda095"
   }
 ]
