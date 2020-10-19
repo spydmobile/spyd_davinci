@@ -24,27 +24,27 @@
     "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6225e3985f4f6e7f630ed06210ed80801fe237e5"
   },
   {
-    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
-    "channelId": "756510148985356420",
-    "userId": "504019785038954500",
-    "host": "gh",
-    "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "f071a5e8544d2a177179893921bb63bab00cb8f8",
-    "commitMessage": "Update GH to show repo Slug",
-    "date": "2020-10-19T14:00:41Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/f071a5e8544d2a177179893921bb63bab00cb8f8"
-  },
-  {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
     "channelId": "761247589521031169",
     "userId": "504019785038954500",
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "f071a5e8544d2a177179893921bb63bab00cb8f8",
-    "commitMessage": "Update GH to show repo Slug",
-    "date": "2020-10-19T14:00:41Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/f071a5e8544d2a177179893921bb63bab00cb8f8"
+    "hash": "1e1324d1cf3df0777aeef9649951486e2859b4af",
+    "commitMessage": "add repo slog to all commit and update embeds",
+    "date": "2020-10-19T14:29:11Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/1e1324d1cf3df0777aeef9649951486e2859b4af"
+  },
+  {
+    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
+    "channelId": "756510148985356420",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "1e1324d1cf3df0777aeef9649951486e2859b4af",
+    "commitMessage": "add repo slog to all commit and update embeds",
+    "date": "2020-10-19T14:29:11Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/1e1324d1cf3df0777aeef9649951486e2859b4af"
   }
 ]
