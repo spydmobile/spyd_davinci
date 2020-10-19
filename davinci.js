@@ -142,10 +142,14 @@ const createBitbucketIssue = msg => {
         //let noun = parsedCommandArr[1] ? parsedCommandArr[1].toLowerCase() : 'default'
         let workspace = await parsedCommandArr[2]
         let repo_slug = await parsedCommandArr[3]
+        let title = await parsedCommandArr.slice(4).join(" ")
+
+
+
         bitbucketFranco.issue_tracker.create({
             _body: {
-                title: 'test issue',
-                body: 'This is a demo of Davinci.'
+                title: title,
+                body: title
             },
             repo_slug,
             workspace

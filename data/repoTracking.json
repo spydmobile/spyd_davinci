@@ -24,27 +24,27 @@
     "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6225e3985f4f6e7f630ed06210ed80801fe237e5"
   },
   {
-    "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
-    "channelId": "761247589521031169",
-    "userId": "504019785038954500",
-    "host": "gh",
-    "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "74254c66c4d50a04bc7c200fe279e873be135f5a",
-    "commitMessage": "fix typo",
-    "date": "2020-10-19T14:30:46Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/74254c66c4d50a04bc7c200fe279e873be135f5a"
-  },
-  {
     "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
     "channelId": "756510148985356420",
     "userId": "504019785038954500",
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "74254c66c4d50a04bc7c200fe279e873be135f5a",
-    "commitMessage": "fix typo",
-    "date": "2020-10-19T14:30:46Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/74254c66c4d50a04bc7c200fe279e873be135f5a"
+    "hash": "eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06",
+    "commitMessage": "Update repo trackers data",
+    "date": "2020-10-19T14:33:39Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06"
+  },
+  {
+    "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
+    "channelId": "761247589521031169",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06",
+    "commitMessage": "Update repo trackers data",
+    "date": "2020-10-19T14:33:39Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/eb05eceaaaf75e0a2a92ec086e4cee7a6fcd0d06"
   }
 ]
