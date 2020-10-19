@@ -30,10 +30,10 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "1e1324d1cf3df0777aeef9649951486e2859b4af",
-    "commitMessage": "add repo slog to all commit and update embeds",
-    "date": "2020-10-19T14:29:11Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/1e1324d1cf3df0777aeef9649951486e2859b4af"
+    "hash": "74254c66c4d50a04bc7c200fe279e873be135f5a",
+    "commitMessage": "fix typo",
+    "date": "2020-10-19T14:30:46Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/74254c66c4d50a04bc7c200fe279e873be135f5a"
   },
   {
     "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
@@ -42,9 +42,9 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "1e1324d1cf3df0777aeef9649951486e2859b4af",
-    "commitMessage": "add repo slog to all commit and update embeds",
-    "date": "2020-10-19T14:29:11Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/1e1324d1cf3df0777aeef9649951486e2859b4af"
+    "hash": "74254c66c4d50a04bc7c200fe279e873be135f5a",
+    "commitMessage": "fix typo",
+    "date": "2020-10-19T14:30:46Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/74254c66c4d50a04bc7c200fe279e873be135f5a"
   }
 ]
