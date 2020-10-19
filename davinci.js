@@ -282,7 +282,7 @@ const subscribeToFrancoRepo = async msg => {
                 var embed = new MessageEmbed()
                     // Set the title of the field
 
-                    .setTitle(`${type}: ${commitMsg}`)
+                    .setTitle(`${repoSlug} - ${type}: ${commitMsg}`)
                     // Set the color of the embed
                     .setColor(0x0000ff)
                     // Set the main content of the embed

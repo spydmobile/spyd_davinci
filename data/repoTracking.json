@@ -12,30 +12,6 @@
     "link": "https://bitbucket.org/intellifire/intellifire_front/commits/41e863a7ff760b929c9186182908923e19d22896"
   },
   {
-    "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
-    "channelId": "761247589521031169",
-    "userId": "504019785038954500",
-    "host": "gh",
-    "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "a6f96a55a8789ef7ab1a4536f1098c5ba8cd1dcf",
-    "commitMessage": "add bitbucket issue creation.",
-    "date": "2020-10-01T21:40:12Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/a6f96a55a8789ef7ab1a4536f1098c5ba8cd1dcf"
-  },
-  {
-    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
-    "channelId": "756510148985356420",
-    "userId": "504019785038954500",
-    "host": "gh",
-    "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "a6f96a55a8789ef7ab1a4536f1098c5ba8cd1dcf",
-    "commitMessage": "add bitbucket issue creation.",
-    "date": "2020-10-01T21:40:12Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/a6f96a55a8789ef7ab1a4536f1098c5ba8cd1dcf"
-  },
-  {
     "subId": "767122187936202802-bb-spydmobile-dnd_map",
     "channelId": "767122187936202802",
     "userId": "504019785038954500",
@@ -46,5 +22,29 @@
     "commitMessage": "Add 3 more tokens\n",
     "date": "2020-10-19T13:46:47+00:00",
     "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6225e3985f4f6e7f630ed06210ed80801fe237e5"
+  },
+  {
+    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
+    "channelId": "756510148985356420",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "526b62b1481281e76b8c541d955077cac465df49",
+    "commitMessage": "Add repo slug to Monitor commit",
+    "date": "2020-10-19T13:59:09Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/526b62b1481281e76b8c541d955077cac465df49"
+  },
+  {
+    "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
+    "channelId": "761247589521031169",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "526b62b1481281e76b8c541d955077cac465df49",
+    "commitMessage": "Add repo slug to Monitor commit",
+    "date": "2020-10-19T13:59:09Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/526b62b1481281e76b8c541d955077cac465df49"
   }
 ]
