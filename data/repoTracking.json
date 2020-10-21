@@ -1,17 +1,5 @@
 [
   {
-    "subId": "735286888843182131-bb-intellifire-intellifire_front",
-    "channelId": "735286888843182131",
-    "userId": "504019785038954500",
-    "host": "bb",
-    "workspace": "intellifire",
-    "repoSlug": "intellifire_front",
-    "hash": "41e863a7ff760b929c9186182908923e19d22896",
-    "commitMessage": "cleanup before end of day\n",
-    "date": "2020-09-25T20:47:36+00:00",
-    "link": "https://bitbucket.org/intellifire/intellifire_front/commits/41e863a7ff760b929c9186182908923e19d22896"
-  },
-  {
     "subId": "767122187936202802-bb-spydmobile-dnd_map",
     "channelId": "767122187936202802",
     "userId": "504019785038954500",
@@ -24,27 +12,39 @@
     "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6225e3985f4f6e7f630ed06210ed80801fe237e5"
   },
   {
-    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
-    "channelId": "756510148985356420",
-    "userId": "504019785038954500",
-    "host": "gh",
-    "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "361d72303143d462023d3f25daf769c07bdda095",
-    "commitMessage": "Refine create issue messages for BB",
-    "date": "2020-10-19T15:04:54Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/361d72303143d462023d3f25daf769c07bdda095"
-  },
-  {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
     "channelId": "761247589521031169",
     "userId": "504019785038954500",
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "361d72303143d462023d3f25daf769c07bdda095",
-    "commitMessage": "Refine create issue messages for BB",
-    "date": "2020-10-19T15:04:54Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/361d72303143d462023d3f25daf769c07bdda095"
+    "hash": "755950ef0d0453009e1e1b50fc31580b46faae84",
+    "commitMessage": "Tweak issue body messge",
+    "date": "2020-10-19T15:07:35Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/755950ef0d0453009e1e1b50fc31580b46faae84"
+  },
+  {
+    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
+    "channelId": "756510148985356420",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "spyd_davinci",
+    "hash": "755950ef0d0453009e1e1b50fc31580b46faae84",
+    "commitMessage": "Tweak issue body messge",
+    "date": "2020-10-19T15:07:35Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/755950ef0d0453009e1e1b50fc31580b46faae84"
+  },
+  {
+    "subId": "735286888843182131-bb-intellifire-intellifire_front",
+    "channelId": "735286888843182131",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "intellifire",
+    "repoSlug": "intellifire_front",
+    "hash": "d8522d69acdfda237e17e441735a73611d0e7fd9",
+    "commitMessage": "step1, 2a, 2b complete\n",
+    "date": "2020-10-20T23:01:44+00:00",
+    "link": "https://bitbucket.org/intellifire/intellifire_front/commits/d8522d69acdfda237e17e441735a73611d0e7fd9"
   }
 ]

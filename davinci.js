@@ -104,7 +104,7 @@ const createGithubIssue = msg => {
             owner: owner,
             repo: repo,
             title: title,
-            body: 'This is just a test issue.',
+            body: "This issue was created by the Davinci Bot.",
             accept: 'application/vnd.github.v3+json'
         })
             .then((foo) => {
