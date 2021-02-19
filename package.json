@@ -2,9 +2,10 @@
   "name": "spyd_davinci",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "davinci.js",
   "scripts": {
-    "devStart": "nodemon  davinci.js -e js"
+    "devStart": "nodemon  davinci.js -e js",
+    "start": "node  davinci.js -e js"
   },
   "author": "",
   "license": "ISC",

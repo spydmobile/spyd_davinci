@@ -1,15 +1,15 @@
 [
   {
-    "subId": "767122187936202802-bb-spydmobile-dnd_map",
-    "channelId": "767122187936202802",
+    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
+    "channelId": "756510148985356420",
     "userId": "504019785038954500",
-    "host": "bb",
+    "host": "gh",
     "workspace": "spydmobile",
-    "repoSlug": "dnd_map",
-    "hash": "6225e3985f4f6e7f630ed06210ed80801fe237e5",
-    "commitMessage": "Add 3 more tokens\n",
-    "date": "2020-10-19T13:46:47+00:00",
-    "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6225e3985f4f6e7f630ed06210ed80801fe237e5"
+    "repoSlug": "spyd_davinci",
+    "hash": "65ed7048440a33dd74dbded55d6c86e564eb1ddb",
+    "commitMessage": "Stub in Waka time keys",
+    "date": "2020-10-21T17:01:56Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/65ed7048440a33dd74dbded55d6c86e564eb1ddb"
   },
   {
     "subId": "761247589521031169-gh-spydmobile-spyd_davinci",
@@ -18,22 +18,46 @@
     "host": "gh",
     "workspace": "spydmobile",
     "repoSlug": "spyd_davinci",
-    "hash": "755950ef0d0453009e1e1b50fc31580b46faae84",
-    "commitMessage": "Tweak issue body messge",
-    "date": "2020-10-19T15:07:35Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/755950ef0d0453009e1e1b50fc31580b46faae84"
+    "hash": "65ed7048440a33dd74dbded55d6c86e564eb1ddb",
+    "commitMessage": "Stub in Waka time keys",
+    "date": "2020-10-21T17:01:56Z",
+    "link": "https://github.com/spydmobile/spyd_davinci/commit/65ed7048440a33dd74dbded55d6c86e564eb1ddb"
   },
   {
-    "subId": "756510148985356420-gh-spydmobile-spyd_davinci",
-    "channelId": "756510148985356420",
+    "subId": "767122187936202802-bb-spydmobile-dnd_map",
+    "channelId": "767122187936202802",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "spydmobile",
+    "repoSlug": "dnd_map",
+    "hash": "6439c392b3cf815daa9b3a914bbcb2e9c79d7c59",
+    "commitMessage": "working better now.\n",
+    "date": "2020-11-16T22:36:54+00:00",
+    "link": "https://bitbucket.org/spydmobile/dnd_map/commits/6439c392b3cf815daa9b3a914bbcb2e9c79d7c59"
+  },
+  {
+    "subId": "735286888843182131-bb-intellifire-intellifire_vars",
+    "channelId": "735286888843182131",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "intellifire",
+    "repoSlug": "intellifire_vars",
+    "hash": "79a3a1ee79278635271be5816fb3e6f6d8ee9f5a",
+    "commitMessage": "fix ENV in docker file\n",
+    "date": "2020-11-24T18:08:58+00:00",
+    "link": "https://bitbucket.org/intellifire/intellifire_vars/commits/79a3a1ee79278635271be5816fb3e6f6d8ee9f5a"
+  },
+  {
+    "subId": "773607517552246796-gh-spydmobile-library_decisions_notes",
+    "channelId": "773607517552246796",
     "userId": "504019785038954500",
     "host": "gh",
     "workspace": "spydmobile",
-    "repoSlug": "spyd_davinci",
-    "hash": "755950ef0d0453009e1e1b50fc31580b46faae84",
-    "commitMessage": "Tweak issue body messge",
-    "date": "2020-10-19T15:07:35Z",
-    "link": "https://github.com/spydmobile/spyd_davinci/commit/755950ef0d0453009e1e1b50fc31580b46faae84"
+    "repoSlug": "library_decisions_notes",
+    "hash": "b052a879a34d74974c4c8733b3db4683f3047c3a",
+    "commitMessage": "Merge pull request #1 from BadgerOnABike/patch-1\n\nUpdates to readme",
+    "date": "2020-12-16T17:31:04Z",
+    "link": "https://github.com/spydmobile/library_decisions_notes/commit/b052a879a34d74974c4c8733b3db4683f3047c3a"
   },
   {
     "subId": "735286888843182131-bb-intellifire-intellifire_front",
@@ -42,9 +66,45 @@
     "host": "bb",
     "workspace": "intellifire",
     "repoSlug": "intellifire_front",
-    "hash": "d8522d69acdfda237e17e441735a73611d0e7fd9",
-    "commitMessage": "step1, 2a, 2b complete\n",
-    "date": "2020-10-20T23:01:44+00:00",
-    "link": "https://bitbucket.org/intellifire/intellifire_front/commits/d8522d69acdfda237e17e441735a73611d0e7fd9"
+    "hash": "20c4485d3e175e25a9746300c0b5d96cd510b2a6",
+    "commitMessage": "add web socket port message to console\n",
+    "date": "2020-12-16T20:59:08+00:00",
+    "link": "https://bitbucket.org/intellifire/intellifire_front/commits/20c4485d3e175e25a9746300c0b5d96cd510b2a6"
+  },
+  {
+    "subId": "754347410859360297-bb-psaasredapp-psaas-js-api",
+    "channelId": "754347410859360297",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "psaasredapp",
+    "repoSlug": "psaas-js-api",
+    "hash": "335441e23b8a78fba722c10f1b2a0d6ff5043b8f",
+    "commitMessage": "Update README with latest version\n\nChange the recommended version of the API to use\nfor new install to the latest version.",
+    "date": "2020-12-28T06:00:20+00:00",
+    "link": "https://bitbucket.org/psaasredapp/psaas-js-api/commits/335441e23b8a78fba722c10f1b2a0d6ff5043b8f"
+  },
+  {
+    "subId": "781574645350268949-bb-psaasredapp-psaas_website",
+    "channelId": "781574645350268949",
+    "userId": "504019785038954500",
+    "host": "bb",
+    "workspace": "psaasredapp",
+    "repoSlug": "psaas_website",
+    "hash": "f99508dea414bfd8acdbd41cca8227bf90dfb484",
+    "commitMessage": "revert demo change\n",
+    "date": "2021-01-08T18:37:10+00:00",
+    "link": "https://bitbucket.org/psaasredapp/psaas_website/commits/f99508dea414bfd8acdbd41cca8227bf90dfb484"
+  },
+  {
+    "subId": "735286888843182131-gh-spydmobile-intellifire_enterprise",
+    "channelId": "735286888843182131",
+    "userId": "504019785038954500",
+    "host": "gh",
+    "workspace": "spydmobile",
+    "repoSlug": "intellifire_enterprise",
+    "hash": "aa753fb31a60390d443455f17dc5c9769122d785",
+    "commitMessage": "fix deps",
+    "date": "2021-02-05T22:44:18Z",
+    "link": "https://github.com/spydmobile/intellifire_enterprise/commit/aa753fb31a60390d443455f17dc5c9769122d785"
   }
 ]

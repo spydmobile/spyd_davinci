@@ -17,8 +17,8 @@ const { createTokenAuth } = require("@octokit/auth-token");
 
 const githubToken = process.env.GH_TOKEN
 console.log(typeof githubToken, githubToken)
-//const githubAuth = createTokenAuth(String(githubToken));
-//const githubTokenAuth = githubAuth()
+const githubAuth = createTokenAuth(String(githubToken));
+const githubTokenAuth = githubAuth()
 const github = new Octokit(
     {
         auth: githubToken,
@@ -201,15 +201,15 @@ const subscribeToFrancoRepo = async msg => {
     if (host == "bb") {
         // bb:intellifire/intellifire_front
         bitbucketFranco.commits.list({
-            //  exclude, 
-            //   include, 
+            //  exclude,
+            //   include,
             "repo_slug": repoSlug,
             "workspace": workspace,
-            // "page", 
+            // "page",
             "pagelen": 1,
-            // q, 
-            // sort, 
-            // fields 
+            // q,
+            // sort,
+            // fields
         })
             .then(({ data, headers }) => {
                 console.log(data)
@@ -340,9 +340,9 @@ const helpUsage = msg => {
     !# help <command>
     verbs and nouns are NOT case sensitive but the parmater string is.
     paramater string can contain many params separated by tilde (~)
-    
+
     EG: !# pull hair left~right~out
-    
+
     Currently available bot commands are:
 
 `
@@ -376,7 +376,7 @@ const helpMonitor = msg => {
 
     let txt = `
     USAGE: !# monitor monitor_type code:<workspace>/<project>
-    Examples: 
+    Examples:
     !# monitor public_repo gh:spydmobile/spyd_davinci
     !# monitor public_rss http://rss.cnn.com/rss/cnn_topstories.rss
     !# monitor franco_repo bb:intellifire/intellifire_lrgs_collector
@@ -384,7 +384,7 @@ const helpMonitor = msg => {
 
     intellifire/intellifire_lrgs_collector
     Where monitor_type is one of:
-    
+
     "public_repo" Either a BitBucket or Github public repo.
     "public_rss" a public URL for an RSS Feed.
     "franco_repo" A Private BitBucket or Github repo on one of Francos Accounts.
@@ -415,14 +415,14 @@ const helpCreateIssue = msg => {
 
     let txt = `
     USAGE: !# create_issue <service> <owner/projectid> <repo/issue_type> <title>
-    Examples: 
+    Examples:
     !# create_issue github spydmobile spyd_davinci purple widge should be green.
     !# create_issue bitbucket intellifire intellifire_easymap This is a sample issue.
     !# create_issue redmine 1234 bug output file is blank.
 
 
     **Where <service> is one of:**
-    
+
     "github" Creates the issue in Github.
     "bitbucket" Creates the issue in Bitbucket.
     "redmine" Creates the issue in Redmine.
@@ -558,15 +558,15 @@ const pullSubData = sub => {
             if (host == "bb") {
                 // bb:intellifire/intellifire_front
                 bitbucketFranco.commits.list({
-                    //  exclude, 
-                    //   include, 
+                    //  exclude,
+                    //   include,
                     "repo_slug": repoSlug,
                     "workspace": workspace,
-                    // "page", 
+                    // "page",
                     "pagelen": 1,
-                    // q, 
-                    // sort, 
-                    // fields 
+                    // q,
+                    // sort,
+                    // fields
                 })
                     .then(({ data, headers }) => {
                         //('bbdata', data)
@@ -815,15 +815,15 @@ bot.login(process.env.BOT_TOKEN);
 //     .catch((err) => console.error(err))
 
 // bitbucketFranco.commits.list({
-//     //  exclude, 
-//     //   include, 
+//     //  exclude,
+//     //   include,
 //     "repo_slug": 'intellifire_front',
 //     "workspace": 'intellifire',
-//     // "page", 
+//     // "page",
 //     "pagelen": 1,
-//     // q, 
-//     // sort, 
-//     // fields 
+//     // q,
+//     // sort,
+//     // fields
 // })
 //     .then(({ data, headers }) => {
 //         console.log(data)
